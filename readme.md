@@ -32,7 +32,10 @@ nix run home-manager/master -- init --switch # これを実行すると、 home-
 # 完了すると設定ファイルが以下に追加される
 code ~/.config/home-manager/home.nix
 
-# 編集して必要なpkgをインストールしたら、
+
+git clone harumaxy/dotfiles
+rm -rf ~/.config/home-manager && copy -R dotfiles ~/.config/home-manager
+
 ```
 
 なんで `nix run` だけで home-manager がグローバルで使えるようになるのか？
@@ -55,7 +58,8 @@ dotfiles パターンで、設定ファイルなどを置き換えるのに便�
 - git add してトラックされていないファイルがあるとエラー
 - 実体は Nix store に保存されるので、 Dotfiles の中身の設定を変更したら再度 `home-manager switch` が必要
 - シンボリックリンクを開くと readonly モードになる。直接編集するには dotfiles をいじって switch
-
+- git の調子によって通らなくなる？
+  - `.config` を `config` にリネームしたらなんか失敗した。 git のトラッキング情報的なやつかも
 
 ## home.programs
 
