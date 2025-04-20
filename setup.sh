@@ -3,7 +3,10 @@
 # with no determinate nix
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
-ln -s $(pwd) /etc/nix-darwin
+# ln -s $(pwd) /etc/nix-darwin # ghq で管理したほうがいい
+
+xcode-select --install
+
 # nix run nix-darwin -- switch --flake .
 nix run nix-darwin -- switch
 
