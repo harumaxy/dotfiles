@@ -17,8 +17,7 @@
       hostname = "MacBook-Pro";
       flakeContext = { inherit inputs user hostname; };
     in {
-      darwinConfigurations."${hostname}" =
-        import ./darwinConfiguration flakeContext;
+      darwinConfigurations."${hostname}" = import ./darwin flakeContext;
       # homeConfigurations.${user} = { ${user} = import ./home flakeContext; };
     };
 }
