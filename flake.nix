@@ -13,11 +13,20 @@
   outputs =
     { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, ... }@inputs:
     let
-      user = "masaharuhosomichi";
-      hostname = "MacBook-Pro";
-      flakeContext = { inherit inputs user hostname; };
+      myPC = {
+        inherit inputs;
+        user = "masaharuhosomichi";
+        hostname = "MacBook-Pro";
+
+      };
+      workPC = {
+        inherit inputs;
+        user = "hosomichi.m";
+        hostname = "hosomichimasaharunoMacBook-Air";
+      };
     in {
-      darwinConfigurations."${hostname}" = import ./darwin flakeContext;
+      darwinConfigurations."${myPC.hostname}" = import ./darwin myPC;
+      darwinConfigurations."${workPC.hostname}" = import ./darwin workPC;
       # homeConfigurations.${user} = { ${user} = import ./home flakeContext; };
     };
 }
