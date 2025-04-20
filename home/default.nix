@@ -10,7 +10,7 @@
       ghq
       peco
       chezmoi
-      nixfmt
+      nixfmt-rfc-style
       nixd
       # pkgs.vscode
       # ghostty
