@@ -27,5 +27,6 @@
     git = import ./programs/git.nix;
     gh.enable = true;
     fish = (import ./programs/fish/default.nix) pkgs;
+    direnv = import ./programs/direnv.nix;
   };
 }

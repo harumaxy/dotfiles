@@ -1,13 +1,13 @@
 { inputs, user, hostname, ... }@flakeContext:
 let
   configuration = { config, pkgs, ... }@configContext: {
-    environment.systemPackages = with pkgs; [ nerd-fonts.jetbrains-mono fish ];
+    nixpkgs.hostPlatform = "aarch64-darwin";
+    nix.settings.experimental-features = "nix-command flakes";
+
+    environment = import ./environment.nix { inherit user pkgs config; };
     homebrew = import ./homebrew.nix configContext;
     system = import ./system.nix configContext;
-
-    nix.settings.experimental-features = "nix-command flakes";
-    programs.fish.enable = true;
-    nixpkgs.hostPlatform = "aarch64-darwin";
+    programs = { fish.enable = true; };
 
   };
   home-manager = inputs.home-manager;
