@@ -1,7 +1,10 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+{
   home = {
     stateVersion = "24.11";
-    sessionVariables = { EDITOR = "code"; };
+    sessionVariables = {
+      EDITOR = "code";
+    };
     packages = with pkgs; [
       neovim
       git
@@ -20,13 +23,22 @@
         echo "Hello, ${config.home.username}!"
       '')
     ];
-    file = { ".config/nvim".source = ./config/nvim; };
+    file = {
+      ".config/nvim".source = ./config/nvim;
+    };
   };
   programs = {
     home-manager.enable = true;
     git = import ./programs/git.nix;
     gh.enable = true;
     fish = (import ./programs/fish/default.nix) pkgs;
-    direnv = import ./programs/direnv.nix;
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+    mise = {
+      enable = true;
+      enableFishIntegration = true;
+    };
   };
 }

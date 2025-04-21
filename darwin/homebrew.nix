@@ -17,6 +17,7 @@ configContext: {
     "raycast"
     "rectangle"
     "slack"
+    "notion"
   ];
   # masApps = [ ];
   # taps = [ ];
