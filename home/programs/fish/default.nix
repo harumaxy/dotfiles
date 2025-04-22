@@ -4,7 +4,7 @@ pkgs: {
   interactiveShellInit = builtins.readFile ./interactiveShellInit.fish;
   functions = {
     "fish_user_key_bindings" = builtins.readFile ./fish_user_key_bindings.fish;
-    "fish_prompt" = builtins.readFile ./fish_prompt.fish;
+    # "fish_prompt" = builtins.readFile ./fish_prompt.fish;
   };
   shellAliases = {
     ww = "wakeonlan 04:7C:16:4A:EB:C4";
@@ -36,6 +36,17 @@ pkgs: {
         repo = "plugin-git";
         rev = "d6950214b6b2392d3dbb2cb670f2a5f240090038";
         hash = "sha256-0uEKw+7EXkf5u3p3hfthSfQO/2rr3wl35ela7P2vB0Q=";
+      };
+    }
+    {
+      # VSCode 内蔵ターミナルだとバグるので以下の設定
+      # "terminal.integrated.fontFamily": "'RobotoMono Nerd Font'"
+      name = "theme-bobthefish";
+      src = pkgs.fetchFromGitHub {
+        owner = "oh-my-fish";
+        repo = "theme-bobthefish";
+        rev = "e3b4d4eafc23516e35f162686f08a42edf844e40";
+        hash = "sha256-cXOYvdn74H4rkMWSC7G6bT4wa9d3/3vRnKed2ixRnuA=";
       };
     }
   ];

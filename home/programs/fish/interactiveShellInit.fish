@@ -7,3 +7,4 @@ abbr -a -g gr git reset
 
 
 alias code=cursor
+set -g theme_nerd_fonts yes
