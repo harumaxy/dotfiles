@@ -18,6 +18,7 @@ configContext: {
     "rectangle"
     "slack"
     "notion"
+    "vlc"
   ];
   # masApps = [ ];
   # taps = [ ];
