@@ -5,6 +5,9 @@ pkgs: {
   functions = {
     "fish_user_key_bindings" = builtins.readFile ./fish_user_key_bindings.fish;
     # "fish_prompt" = builtins.readFile ./fish_prompt.fish;
+    nbnew = ''
+      nb add -f "$(date -Iminutes).$argv[1].md"
+    '';
   };
   shellAliases = {
     ww = "wakeonlan 04:7C:16:4A:EB:C4";

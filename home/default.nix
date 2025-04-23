@@ -15,13 +15,8 @@
       chezmoi
       nixfmt-rfc-style
       nixd
-      # pkgs.vscode
-      # ghostty
       # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-      # 簡単なシェルスクリプトを ~/.nix-profile/bin に出力。パス通ってるので実行できる。
-      (pkgs.writeShellScriptBin "my-hello" ''
-        echo "Hello, ${config.home.username}!"
-      '')
+      nb
     ];
     file = {
       ".config/nvim".source = ./config/nvim;
