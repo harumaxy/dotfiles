@@ -20,6 +20,7 @@
       bat
       # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
       nb
+      w3m
     ];
     file = {
       ".config/nvim".source = ./config/nvim;
