@@ -1,9 +1,15 @@
-pkgs: {
+pkgs:
+let
+  programsPath = "/etc/nix-darwin/home/programs";
+in
+{
   enable = true;
   generateCompletions = true;
-  interactiveShellInit = builtins.readFile ./interactiveShellInit.fish;
+  interactiveShellInit = ''
+    for f in $(ls ${programsPath}/fish/ | grep \.fish); . ${programsPath}/fish/$f; end
+  '';
   functions = {
-    "fish_user_key_bindings" = builtins.readFile ./fish_user_key_bindings.fish;
+    # "fish_user_key_bindings" = builtins.readFile ./fish_user_key_bindings.fish;
     # "fish_prompt" = builtins.readFile ./fish_prompt.fish;
     nbnew = ''
       nb add -f "$(date -Iminutes).$argv[1].md"
