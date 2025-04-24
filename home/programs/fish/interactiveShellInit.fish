@@ -6,7 +6,9 @@ abbr -a -g gc git commit -m
 abbr -a -g gs git status -s
 abbr -a -g gr git reset
 
-abbr -a nba --set-cursor={} "nb add -f \"$(date -Iminutes).{}.md\""
+
+# nb の新しいファイル名に日付-時分を入れる (nbのファイル名に + や : の特殊文字が入ると検索できないのでうまいこと避ける)
+abbr -a nba --set-cursor={} "nb add -f \"$(date '+%Y-%m-%dT%H-%M').{}.md\""
 
 set -x NB_DIR $HOME/ghq/github.com/harumaxy/nb
 

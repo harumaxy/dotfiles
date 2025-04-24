@@ -15,6 +15,9 @@
       chezmoi
       nixfmt-rfc-style
       nixd
+      ripgrep
+      ripgrep-all
+      bat
       # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
       nb
     ];
