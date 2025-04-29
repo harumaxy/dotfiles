@@ -21,9 +21,10 @@
       # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
       nb
       w3m
+      httpie
     ];
     file = {
-      ".config/nvim".source = ./config/nvim;
+      # ".config/nvim".source = ./config/nvim;
     };
   };
   programs = {

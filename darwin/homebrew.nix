@@ -6,7 +6,9 @@ configContext: {
   casks = [
     "arc"
     "appcleaner"
-    "cursor"
+    # "cursor"
+    "chromium"
+    "visual-studio-code"
     "deepl"
     "ghostty"
     "google-japanese-ime" # キーボード設定で適当なのを + / - して反映する

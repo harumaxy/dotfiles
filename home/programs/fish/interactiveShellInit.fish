@@ -9,10 +9,12 @@ abbr -a -g gr git reset
 
 set -x NB_DIR $HOME/ghq/github.com/harumaxy/nb
 # nb の新しいファイル名に日付-時分を入れる (nbのファイル名に + や : の特殊文字が入ると検索できないのでうまいこと避ける)
-abbr -a nba --set-cursor={} "nb add -f \"$(date '+%Y-%m-%dT%H-%M').{}.md\""
+function nba
+  nb add -f $(date '+%Y-%m-%dT%H-%M').$argv[1].md -t $argv[1]
+end
+
 abbr -a nbr code $NB_DIR
 
 abbr -a dotfiles code /etc/nix-darwin
 
-alias code=cursor
 set -g theme_nerd_fonts yes
