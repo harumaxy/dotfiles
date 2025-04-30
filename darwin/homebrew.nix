@@ -21,6 +21,7 @@ configContext: {
     "slack"
     "notion"
     "vlc"
+    "betterdisplay"
   ];
   # masApps = [ ];
   # taps = [ ];
