@@ -7,7 +7,6 @@ configContext: {
     "arc"
     "appcleaner"
     # "cursor"
-    "chromium"
     "visual-studio-code"
     "deepl"
     "ghostty"
@@ -23,6 +22,7 @@ configContext: {
     "vlc"
     "betterdisplay"
     "font-fira-code-nerd-font"
+    "tailscale"
   ];
   # masApps = [ ];
   # taps = [ ];
