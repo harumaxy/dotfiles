@@ -22,6 +22,7 @@ configContext: {
     "notion"
     "vlc"
     "betterdisplay"
+    "font-fira-code-nerd-font"
   ];
   # masApps = [ ];
   # taps = [ ];
