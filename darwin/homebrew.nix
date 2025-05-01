@@ -24,6 +24,7 @@ configContext: {
     "betterdisplay"
     "font-fira-code-nerd-font"
     "tailscale"
+    "pgadmin4"
   ];
   # masApps = [ ];
   # taps = [ ];
