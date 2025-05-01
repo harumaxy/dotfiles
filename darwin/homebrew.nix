@@ -5,6 +5,7 @@ configContext: {
   # brews = [];
   casks = [
     "arc"
+    "google-chrome"
     "appcleaner"
     # "cursor"
     "visual-studio-code"
