@@ -22,6 +22,7 @@
       nb
       w3m
       httpie
+      postgresql
     ];
     file = {
       # ".config/nvim".source = ./config/nvim;
