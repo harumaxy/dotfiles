@@ -23,6 +23,7 @@
       w3m
       httpie
       postgresql
+      sqldef
     ];
     file = {
       # ".config/nvim".source = ./config/nvim;
