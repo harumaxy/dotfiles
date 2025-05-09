@@ -18,3 +18,5 @@ abbr -a nbr code $NB_DIR
 abbr -a dotfiles code /etc/nix-darwin
 
 set -g theme_nerd_fonts yes
+
+set -g theme_newline_cursor "yes"
