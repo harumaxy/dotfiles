@@ -2,7 +2,9 @@ configContext: {
   enable = true;
   global.autoUpdate = true;
   onActivation.cleanup = "uninstall";
-  # brews = [];
+  brews = [
+    "awscli"
+  ];
   casks = [
     "arc"
     "google-chrome"
