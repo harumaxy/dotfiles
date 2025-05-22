@@ -28,6 +28,7 @@ configContext: {
     "tailscale"
     "pgadmin4"
     "imageoptim"
+    "gitify"
   ];
   # masApps = [ ];
   # taps = [ ];
