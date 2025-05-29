@@ -4,6 +4,7 @@ configContext: {
   onActivation.cleanup = "uninstall";
   brews = [
     "awscli"
+    "sqldef/sqldef/mysqldef"
   ];
   casks = [
     "arc"
