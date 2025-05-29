@@ -4,7 +4,7 @@ configContext: {
   onActivation.cleanup = "uninstall";
   brews = [
     "awscli"
-    "sqldef/sqldef/mysqldef"
+    "sqldef/sqldef/psqldef"
   ];
   casks = [
     "arc"
@@ -32,6 +32,8 @@ configContext: {
     "gitify"
   ];
   # masApps = [ ];
-  # taps = [ ];
+  taps = [
+    "sqldef/sqldef"
+  ];
   # whalebrew = [ ];
 }
