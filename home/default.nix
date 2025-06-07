@@ -24,6 +24,7 @@
       httpie
       postgresql
       wget
+      ffmpeg
     ];
     file = {
       # ".config/nvim".source = ./config/nvim;

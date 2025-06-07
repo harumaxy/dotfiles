@@ -30,6 +30,7 @@ configContext: {
     "pgadmin4"
     "imageoptim"
     "gitify"
+    "android-file-transfer"
   ];
   # masApps = [ ];
   taps = [
