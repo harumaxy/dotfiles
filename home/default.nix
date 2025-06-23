@@ -25,6 +25,7 @@
       postgresql
       wget
       ffmpeg
+      imagemagick
     ];
     file = {
       # ".config/nvim".source = ./config/nvim;
