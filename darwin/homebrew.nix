@@ -15,7 +15,8 @@ configContext: {
     "deepl"
     "ghostty"
     "google-japanese-ime" # キーボード設定で適当なのを + / - して反映する
-    # "hammerspoon"
+    "hammerspoon"
+    "dzirtusss/tap/vifari" # hammerspoonに依存
     "karabiner-elements"
     "microsoft-teams"
     "orbstack"
@@ -31,6 +32,7 @@ configContext: {
     "imageoptim"
     "gitify"
     "android-file-transfer"
+    "firefox"
   ];
   # masApps = [ ];
   taps = [
