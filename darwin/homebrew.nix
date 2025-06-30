@@ -37,6 +37,7 @@ configContext: {
   # masApps = [ ];
   taps = [
     "sqldef/sqldef"
+    "dzirtusss/tap"
   ];
   # whalebrew = [ ];
 }

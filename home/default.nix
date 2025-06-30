@@ -26,6 +26,7 @@
       wget
       ffmpeg
       imagemagick
+      fpp
     ];
     file = {
       # ".config/nvim".source = ./config/nvim;
