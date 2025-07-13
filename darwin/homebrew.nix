@@ -9,6 +9,7 @@ configContext: {
   casks = [
     "arc"
     "google-chrome"
+    "brave-browser"
     "appcleaner"
     # "cursor"
     "visual-studio-code"
@@ -33,11 +34,14 @@ configContext: {
     "gitify"
     "android-file-transfer"
     "firefox"
+    "deskflow"
+    "anki"
   ];
   # masApps = [ ];
   taps = [
     "sqldef/sqldef"
     "dzirtusss/tap"
+    "deskflow/homebrew-tap"
   ];
   # whalebrew = [ ];
 }
