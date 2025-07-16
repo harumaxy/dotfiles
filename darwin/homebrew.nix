@@ -36,6 +36,8 @@ configContext: {
     "firefox"
     "deskflow"
     "anki"
+    "blender"
+    "claude"
   ];
   # masApps = [ ];
   taps = [
