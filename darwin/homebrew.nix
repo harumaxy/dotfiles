@@ -38,6 +38,8 @@ configContext: {
     "anki"
     "blender"
     "claude"
+    "termius"
+    "tailscale-app"
   ];
   # masApps = [ ];
   taps = [
