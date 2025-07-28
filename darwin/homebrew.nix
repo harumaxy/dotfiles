@@ -5,6 +5,7 @@ configContext: {
   brews = [
     "awscli"
     "sqldef/sqldef/psqldef"
+    "yt-dlp"
   ];
   casks = [
     "arc"
@@ -40,6 +41,7 @@ configContext: {
     "claude"
     "termius"
     "tailscale-app"
+    "discord"
   ];
   # masApps = [ ];
   taps = [

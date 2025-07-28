@@ -14,9 +14,23 @@ function nba
 end
 
 abbr -a nbr code $NB_DIR
-
 abbr -a dotfiles code /etc/nix-darwin
-
 set -g theme_nerd_fonts yes
-
 set -g theme_newline_cursor "yes"
+
+function qcd
+    switch $argv[1]
+        case work
+            cd $HOME/work
+        case movies
+            cd ~/Movies
+        case '*'
+            echo "qcd: unknown key '$argv[1]'"
+            return 1
+    end
+    pwd
+end
+
+complete -c qcd -a "work movies"
+
+set -x CDPATH "$HOME:$HOME/Movies"
