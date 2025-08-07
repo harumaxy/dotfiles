@@ -6,6 +6,8 @@ configContext: {
     "awscli"
     "sqldef/sqldef/psqldef"
     "yt-dlp"
+    "wakeonlan"
+    "mpv"
   ];
   casks = [
     "arc"
