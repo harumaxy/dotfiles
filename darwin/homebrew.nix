@@ -8,6 +8,8 @@ configContext: {
     "yt-dlp"
     "wakeonlan"
     "mpv"
+    "skiptools/skip/skip"
+
   ];
   casks = [
     "arc"
@@ -44,6 +46,8 @@ configContext: {
     "termius"
     "tailscale-app"
     "discord"
+    "android-studio"
+    "godot"
   ];
   # masApps = [ ];
   taps = [
