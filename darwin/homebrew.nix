@@ -9,7 +9,7 @@ configContext: {
     "wakeonlan"
     "mpv"
     "skiptools/skip/skip"
-    "fzf"
+    "ni"
 
   ];
   casks = [
