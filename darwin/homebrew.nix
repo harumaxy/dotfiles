@@ -10,6 +10,7 @@ configContext: {
     "mpv"
     "skiptools/skip/skip"
     "ni"
+    "wireshark"
 
   ];
   casks = [
