@@ -8,9 +8,11 @@ configContext: {
     "yt-dlp"
     "wakeonlan"
     "mpv"
-    "skiptools/skip/skip"
     "ni"
     "wireshark"
+    "pandoc"
+    "aws-sam-cli"
+    "mkcert"
 
   ];
   casks = [
