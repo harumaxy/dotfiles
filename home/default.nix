@@ -36,7 +36,7 @@
     home-manager.enable = true;
     git = import ./programs/git.nix;
     gh.enable = true;
-    fish = (import ./programs/fish/default.nix) pkgs;
+    # fish = (import ./programs/fish/default.nix) pkgs;
     direnv = {
       enable = true;
       nix-direnv.enable = true;

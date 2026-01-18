@@ -40,7 +40,6 @@ configContext: {
     "tailscale"
     "pgadmin4"
     "imageoptim"
-    "gitify"
     "android-file-transfer"
     "firefox"
     "deskflow"
