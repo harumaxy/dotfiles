@@ -2,11 +2,12 @@
 let
   configuration = { config, pkgs, ... }@configContext: {
     nixpkgs.hostPlatform = "aarch64-darwin";
+    nixpkgs.config.allowUnfree = true;
     nix.settings.experimental-features = "nix-command flakes";
 
     environment = import ./environment.nix { inherit user pkgs config; };
     homebrew = import ./homebrew.nix configContext;
-    system = import ./system.nix configContext;
+    system = import ./system.nix { inherit user pkgs config; };
     programs = { fish.enable = true; };
 
   };

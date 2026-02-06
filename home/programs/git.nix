@@ -1,9 +1,11 @@
 {
   enable = true;
-  userEmail = "harumaxy@gmail.com";
-  userName = "harumaxy";
   lfs.enable = true;
-  iniContent = {
+  settings = {
+    user = {
+      email = "harumaxy@gmail.com";
+      name = "harumaxy";
+    };
     core.editor = "code --wait";
     push.autoSetupRemote = true;
     init.defaultBranch = "main";
@@ -11,5 +13,6 @@
   ignores = [
     ".DS_Store"
     "node_modules"
+    "*.local.*"
   ];
 }

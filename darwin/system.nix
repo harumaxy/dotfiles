@@ -1,6 +1,7 @@
-{ pkgs, config, ... }@configContext: {
+{ user, pkgs, config, ... }@configContext: {
   # configurationRevision = self.rev or self.dirtyRev or null;
   stateVersion = 6;
+  primaryUser = user;
   defaults.".GlobalPreferences"."com.apple.mouse.scaling" = 3.0;
   defaults.".GlobalPreferences"."com.apple.sound.beep.sound" =
     /System/Library/Sounds/Sosumi.aiff;
@@ -61,7 +62,7 @@
     env = pkgs.buildEnv {
       name = "system-applications";
       paths = config.environment.systemPackages;
-      pathsToLink = "/Applications";
+      pathsToLink = [ "/Applications" ];
     };
   in pkgs.lib.mkForce ''
     # Set up applications.

@@ -36,3 +36,5 @@ complete -c qcd -a "work movies"
 set -x CDPATH "$HOME:$HOME/Movies"
 
 fish_add_path "/Users/harumaxy/.bun/bin"
+
+zoxide init fish | source

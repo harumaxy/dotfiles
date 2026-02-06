@@ -1,5 +1,6 @@
 { pkgs, config, ... }:
 {
+  nixpkgs.config.allowUnfree = true;
   home = {
     stateVersion = "24.11";
     sessionVariables = {
@@ -13,7 +14,7 @@
       ghq
       peco
       chezmoi
-      nixfmt-rfc-style
+      nixfmt
       nixd
       ripgrep
       ripgrep-all
@@ -27,6 +28,9 @@
       ffmpeg
       imagemagick
       fpp
+      zoxide
+      cloudflared
+      ngrok
     ];
     file = {
       # ".config/nvim".source = ./config/nvim;
@@ -36,7 +40,7 @@
     home-manager.enable = true;
     git = import ./programs/git.nix;
     gh.enable = true;
-    # fish = (import ./programs/fish/default.nix) pkgs;
+    fish = (import ./programs/fish/default.nix) pkgs;
     direnv = {
       enable = true;
       nix-direnv.enable = true;
