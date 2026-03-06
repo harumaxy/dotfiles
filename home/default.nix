@@ -31,6 +31,9 @@
       zoxide
       cloudflared
       ngrok
+      claude-code
+      tmux
+      fd
     ];
     file = {
       # ".config/nvim".source = ./config/nvim;

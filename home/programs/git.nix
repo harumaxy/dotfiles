@@ -14,5 +14,7 @@
     ".DS_Store"
     "node_modules"
     "*.local.*"
+    "_my_files*"
+
   ];
 }

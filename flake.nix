@@ -29,6 +29,10 @@
     {
       darwinConfigurations."${myPC.hostname}" = import ./darwin myPC;
       # darwinConfigurations."${workPC.hostname}" = import ./darwin workPC;
-      # homeConfigurations.${user} = { ${user} = import ./home flakeContext; };
+
+      homeConfigurations."${myPC.user}" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        modules = [ ./home ];
+      };
     };
 }

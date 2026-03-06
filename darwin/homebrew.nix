@@ -37,7 +37,6 @@ configContext: {
     "vlc"
     "betterdisplay"
     "font-fira-code-nerd-font"
-    "tailscale"
     "pgadmin4"
     "imageoptim"
     "android-file-transfer"
@@ -51,6 +50,7 @@ configContext: {
     "discord"
     "android-studio"
     "godot"
+    "zed"
   ];
   # masApps = [ ];
   taps = [
