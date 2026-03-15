@@ -47,3 +47,7 @@ set -x CDPATH "$HOME:$HOME/Movies"
 fish_add_path "/Users/harumaxy/.bun/bin"
 
 zoxide init fish | source
+
+# claude code を --dangerously-skip-permissions で最大スループットを得る
+abbr -a claude-yolo "claude --dangerously-skip-permissions"
+abbr -a ccd "claude --dangerously-skip-permissions"
