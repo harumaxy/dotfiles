@@ -21,7 +21,6 @@
       bat
       # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
       nb
-      w3m
       httpie
       postgresql
       wget

@@ -6,6 +6,15 @@ abbr -a -g gc git commit -m
 abbr -a -g gs git status -s
 abbr -a -g gr git reset
 
+# ghq get をデフォルトで --shallow で clone するようにする
+function ghq --wraps ghq
+    if test (count $argv) -ge 1 -a "$argv[1]" = "get"
+        command ghq $argv[1] --shallow $argv[2..]
+    else
+        command ghq $argv
+    end
+end
+
 
 set -x NB_DIR $HOME/ghq/github.com/harumaxy/nb
 # nb の新しいファイル名に日付-時分を入れる (nbのファイル名に + や : の特殊文字が入ると検索できないのでうまいこと避ける)
