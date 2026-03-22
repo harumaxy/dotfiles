@@ -4,7 +4,7 @@
   home = {
     stateVersion = "24.11";
     sessionVariables = {
-      EDITOR = "code";
+      EDITOR = "zed";
     };
     packages = with pkgs; [
       neovim
@@ -30,7 +30,6 @@
       zoxide
       cloudflared
       ngrok
-      claude-code
       tmux
       fd
     ];

@@ -6,7 +6,7 @@
       email = "harumaxy@gmail.com";
       name = "harumaxy";
     };
-    core.editor = "code --wait";
+    core.editor = "$EDITOR --wait";
     push.autoSetupRemote = true;
     init.defaultBranch = "main";
   };
