@@ -13,8 +13,7 @@ configContext: {
     "pandoc"
     "aws-sam-cli"
     "mkcert"
-    "w3m"
-
+    "miller"
   ];
   casks = [
     "arc"
