@@ -14,6 +14,12 @@ configContext: {
     "aws-sam-cli"
     "mkcert"
     "miller"
+    "autoconf"
+    "automake"
+    "libtool"
+    "pkg-config"
+    "bison"
+    "re2c"
   ];
   casks = [
     "arc"
