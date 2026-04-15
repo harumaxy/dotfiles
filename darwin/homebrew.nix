@@ -20,6 +20,7 @@ configContext: {
     "pkg-config"
     "bison"
     "re2c"
+    "gd"
   ];
   casks = [
     "arc"
