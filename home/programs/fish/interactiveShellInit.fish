@@ -41,6 +41,7 @@ fish_add_path "/Users/harumaxy/.bun/bin"
 fish_add_path "/Users/harumaxy/.local/bin"
 
 zoxide init fish | source
+git gtr init fish | source
 
 # claude code を --dangerously-skip-permissions で最大スループットを得る
 abbr -a claude-yolo "claude --dangerously-skip-permissions"
