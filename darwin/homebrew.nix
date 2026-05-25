@@ -2,6 +2,7 @@ configContext: {
   enable = true;
   global.autoUpdate = true;
   onActivation.cleanup = "uninstall";
+  onActivation.upgrade = true;
   brews = [
     "awscli"
     "sqldef/sqldef/psqldef"

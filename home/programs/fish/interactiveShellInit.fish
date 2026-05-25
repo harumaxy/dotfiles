@@ -15,8 +15,8 @@ function nba
   nb add -f $(date '+%Y-%m-%dT%H-%M').$argv[1].md -t $argv[1]
 end
 
-abbr -a nbr code $NB_DIR
-abbr -a dotfiles code /etc/nix-darwin
+abbr -a nbr $EDITOR $NB_DIR
+abbr -a dotfiles $EDITOR /etc/nix-darwin
 set -g theme_nerd_fonts yes
 set -g theme_newline_cursor "yes"
 
@@ -42,6 +42,10 @@ fish_add_path "/Users/harumaxy/.local/bin"
 
 zoxide init fish | source
 git gtr init fish | source
+
+function update-all
+    cd /etc/nix-darwin && nix flake update && sudo darwin-rebuild switch
+end
 
 # claude code を --dangerously-skip-permissions で最大スループットを得る
 abbr -a claude-yolo "claude --dangerously-skip-permissions"
