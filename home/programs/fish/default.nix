@@ -11,6 +11,7 @@ in
   functions = {
     # "fish_user_key_bindings" = builtins.readFile ./fish_user_key_bindings.fish;
     # "fish_prompt" = builtins.readFile ./fish_prompt.fish;
+    fish_right_prompt = "";
     nbnew = ''
       nb add -f "$(date -Iminutes).$argv[1].md"
     '';
