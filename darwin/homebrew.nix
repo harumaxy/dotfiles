@@ -40,6 +40,8 @@ configContext: {
     "oniguruma"
     "libpq"
     "defaultbrowser"
+    "git"
+    "git-gtr"
   ];
   casks = [
     "arc"
@@ -83,6 +85,7 @@ configContext: {
     "sqldef/sqldef"
     "dzirtusss/tap"
     "deskflow/homebrew-tap"
+    "coderabbitai/tap"
   ];
   # whalebrew = [ ];
 }
