@@ -39,6 +39,7 @@ configContext: {
     "imagemagick"
     "oniguruma"
     "libpq"
+    "defaultbrowser"
   ];
   casks = [
     "arc"

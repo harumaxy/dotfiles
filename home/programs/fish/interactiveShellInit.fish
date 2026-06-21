@@ -35,7 +35,8 @@ end
 
 complete -c qcd -a "work movies"
 
-set -x CDPATH "$HOME:$HOME/Movies"
+# 変な動作になるので無効化
+# set -x CDPATH "$HOME:$HOME/Movies"
 
 fish_add_path "/Users/harumaxy/.bun/bin"
 fish_add_path "/Users/harumaxy/.local/bin"
