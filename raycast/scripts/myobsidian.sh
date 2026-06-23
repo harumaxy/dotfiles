@@ -3,9 +3,9 @@
 # Required parameters:
 # @raycast.schemaVersion 1
 # @raycast.title MyObsidian
-# @raycast.mode compact
+# @raycast.mode silent
 
 # Optional parameters:
 # @raycast.icon 💻
 
-$EDITOR /Users/harumaxy/ghq/github.com/harumaxy/my-obsidian
+zed /Users/harumaxy/ghq/github.com/harumaxy/my-obsidian
