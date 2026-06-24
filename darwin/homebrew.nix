@@ -42,6 +42,7 @@ configContext: {
     "defaultbrowser"
     "git"
     "git-gtr"
+    "mq"
   ];
   casks = [
     "arc"
