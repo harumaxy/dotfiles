@@ -4,7 +4,7 @@
   home = {
     stateVersion = "24.11";
     sessionVariables = {
-      EDITOR = "zed";
+      EDITOR = "zed --wait";
     };
     packages = with pkgs; [
       neovim
