@@ -38,8 +38,8 @@ complete -c qcd -a "work movies"
 # 変な動作になるので無効化
 # set -x CDPATH "$HOME:$HOME/Movies"
 
-fish_add_path "/Users/harumaxy/.bun/bin"
-fish_add_path "/Users/harumaxy/.local/bin"
+fish_add_path "$HOME/.bun/bin"
+fish_add_path "$HOME/.local/bin"
 
 zoxide init fish | source
 git gtr init fish | source

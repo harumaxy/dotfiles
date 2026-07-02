@@ -58,7 +58,8 @@ configContext: {
     "dzirtusss/tap/vifari" # hammerspoonに依存
     "karabiner-elements"
     "microsoft-teams"
-    "orbstack"
+    # "orbstack" # 営利企業のローカル開発で使うのもNG
+    "docker-desktop"
     "raycast"
     "rectangle"
     "slack"
