@@ -15,6 +15,12 @@ in
     nbnew = ''
       nb add -f "$(date -Iminutes).$argv[1].md"
     '';
+    # マージ済み(リモートで削除された)ローカルブランチを掃除する。
+    # squash マージ運用向け: --merged は効かないので gone 判定で消す。
+    git-clean-merged = ''
+      git fetch --prune
+      git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -L1 git branch -D
+    '';
   };
   shellAliases = {
     ww = "wakeonlan 04:7C:16:4A:EB:C4";
