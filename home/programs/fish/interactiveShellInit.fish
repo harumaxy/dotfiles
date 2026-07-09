@@ -1,3 +1,9 @@
+# ユーザー任意の設定 (config.fish は nix store への symlink なので別ファイル)
+set -l local_config $HOME/.config/fish/config.local.fish
+if test -f $local_config
+    source $local_config
+end
+
 set fish_greeting # Disable greeting
 set GHQ_SELECTOR peco
 
