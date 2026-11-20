@@ -90,3 +90,6 @@ direnv hook fish | source
 function update-all
     brew update; and brew upgrade; and chezmoi apply
 end
+
+# bobthefish の右プロンプトを無効化
+function fish_right_prompt; end
