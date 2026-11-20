@@ -1,7 +1,7 @@
 #!/bin/bash
-# Brewfile hash: {{ include "Brewfile" | sha256sum }}
+# Brewfile hash: {{ joinPath .chezmoi.sourceDir ".." "Brewfile" | include | sha256sum }}
 set -eu
 export HOMEBREW_NO_REQUIRE_TAP_TRUST=1
 # 1 件の失敗で chezmoi apply 全体を止めない (失敗した項目は出力に出る)
-/opt/homebrew/bin/brew bundle --file="{{ .chezmoi.sourceDir }}/Brewfile" || echo "warning: brew bundle に失敗した項目あり" >&2
+/opt/homebrew/bin/brew bundle --file="{{ .chezmoi.sourceDir }}/../Brewfile" || echo "warning: brew bundle に失敗した項目あり" >&2
 # Brewfile に無いものを消すときは手動: brew bundle cleanup --force --file=...

@@ -10,12 +10,19 @@ Homebrew + [chezmoi](https://www.chezmoi.io/) で管理する macOS 環境。
 
 ## 構成
 
-- `Brewfile` — brew / cask / tap。変更すると `chezmoi apply` 時に `brew bundle` が走る
-- `run_onchange_after_30-macos-defaults.sh` — macOS の defaults。変更すると再実行される
-- `dot_config/fish/` — fish 設定。プラグインは `fish_plugins` (fisher)
-- `dot_config/git/` — git 設定
-- `Library/LaunchAgents/` — CapsLock → Control (hidutil)
-- `raycast/` — Raycast script (chezmoi 管理外。Raycast から直接参照)
+```
+.chezmoiroot      # chezmoi のソースを chezmoi/ に限定する
+Brewfile          # brew / cask / tap
+setup.sh          # 新マシンの導入
+raycast/          # Raycast script (Raycast から直接参照)
+chezmoi/          # ← chezmoi が管理する部分
+├── dot_config/   # ~/.config (fish, git)。dot_ は先頭の . の代わり
+├── Library/      # LaunchAgents (CapsLock → Control)
+└── .chezmoiscripts/   # apply 時に実行するスクリプト (ホームには展開されない)
+    ├── run_onchange_before_10-brew-bundle.sh.tmpl   # Brewfile が変わったら brew bundle
+    ├── run_onchange_after_20-fisher.fish.tmpl       # fish_plugins が変わったら fisher update
+    └── run_onchange_after_30-macos-defaults.sh      # macOS の defaults (内容が変わったら再実行)
+```
 
 ## 使い方
 
