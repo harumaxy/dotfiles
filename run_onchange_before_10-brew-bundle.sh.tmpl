@@ -1,0 +1,6 @@
+#!/bin/bash
+# Brewfile hash: {{ include "Brewfile" | sha256sum }}
+set -eu
+export HOMEBREW_NO_REQUIRE_TAP_TRUST=1
+/opt/homebrew/bin/brew bundle --file="{{ .chezmoi.sourceDir }}/Brewfile"
+# Brewfile に無いものを消すときは手動: brew bundle cleanup --force --file=...
