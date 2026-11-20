@@ -33,4 +33,4 @@ update-all           # brew update/upgrade + chezmoi apply (fish)
 brew bundle cleanup --file=Brewfile   # Brewfile に無いものを確認 (--force で削除)
 ```
 
-fish の実験用設定は git 管理外の `~/.config/fish/config.local.fish` に書く。
+fish の試用設定は git 管理外の `~/.config/fish/config.local.fish` に書く (config.fish の最後に読むので上書きできる)。良ければ `chezmoi re-add` / `chezmoi add` で取り込む。

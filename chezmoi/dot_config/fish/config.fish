@@ -6,12 +6,6 @@ set -gx EDITOR "zed --wait"
 
 abbr -a ww wakeonlan 04:7C:16:4A:EB:C4
 
-# ユーザー任意の設定 (git 管理外)
-set -l local_config $HOME/.config/fish/config.local.fish
-if test -f $local_config
-    source $local_config
-end
-
 set fish_greeting # Disable greeting
 set GHQ_SELECTOR peco
 
@@ -95,3 +89,9 @@ end
 
 # bobthefish の右プロンプトを無効化
 function fish_right_prompt; end
+
+# 試用中の設定 (git 管理外)。最後に読むので、上の定義を上書きできる
+set -l local_config $HOME/.config/fish/config.local.fish
+if test -f $local_config
+    source $local_config
+end
