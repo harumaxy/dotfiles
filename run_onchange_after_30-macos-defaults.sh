@@ -1,6 +1,6 @@
 #!/bin/bash
 # macOS の設定 (旧 darwin/system.nix)。内容を変更すると次回 chezmoi apply で再実行される。
-set -u
+set -eu
 
 # CapsLock -> Control (即時反映。永続化は LaunchAgent 側)
 hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":30064771129,"HIDKeyboardModifierMappingDst":30064771296}]}' >/dev/null

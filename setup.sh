@@ -5,7 +5,7 @@ set -eu
 xcode-select -p >/dev/null 2>&1 || xcode-select --install
 
 if ! command -v /opt/homebrew/bin/brew >/dev/null; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install chezmoi git

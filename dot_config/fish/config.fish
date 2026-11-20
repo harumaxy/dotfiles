@@ -54,10 +54,15 @@ complete -c qcd -a "work movies"
 
 fish_add_path "$HOME/.bun/bin"
 fish_add_path "$HOME/.local/bin"
+fish_add_path /opt/homebrew/opt/libpq/bin # psql (keg-only)
 
-
-zoxide init fish | source
-git gtr init fish | source
+# 対話シェルのみ (非対話の起動を遅くしない)
+if status is-interactive
+    zoxide init fish | source
+    git gtr init fish | source
+    mise activate fish | source
+    direnv hook fish | source
+end
 
 
 # claude code を --dangerously-skip-permissions で最大スループットを得る
@@ -83,9 +88,6 @@ function git-clean-merged
     git fetch --prune
     git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -L1 git branch -D
 end
-
-mise activate fish | source
-direnv hook fish | source
 
 function update-all
     brew update; and brew upgrade; and chezmoi apply

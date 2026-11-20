@@ -5,7 +5,7 @@ Homebrew + [chezmoi](https://www.chezmoi.io/) で管理する macOS 環境。
 ## セットアップ
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/harumaxy/dotfiles/main/setup.sh | bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/harumaxy/dotfiles/main/setup.sh)"
 ```
 
 ## 構成
