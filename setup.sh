@@ -13,7 +13,9 @@ brew install chezmoi git
 # ghq 配下に clone して、そこを chezmoi の source にする
 SRC="$HOME/ghq/github.com/harumaxy/dotfiles"
 [ -d "$SRC" ] || git clone https://github.com/harumaxy/dotfiles "$SRC"
-chezmoi init --apply --source "$SRC"
+mkdir -p ~/.config/chezmoi
+echo "sourceDir = \"$SRC\"" > ~/.config/chezmoi/chezmoi.toml
+chezmoi apply </dev/null  # stdin を閉じないと fisher スクリプトが止まることがある
 
 # fish をログインシェルにする
 FISH=/opt/homebrew/bin/fish
